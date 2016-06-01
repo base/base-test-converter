@@ -1,7 +1,7 @@
 {
   "name": "base-test-converter",
   "description": "Converts unit tests to the style used by base-test-suite.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/node-base/base-test-converter",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "node-base/base-test-converter",
@@ -10,7 +10,8 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "lib"
   ],
   "main": "index.js",
   "engines": {
@@ -47,7 +48,11 @@
     "templates": "^0.20.2",
     "vinyl": "^1.1.1"
   },
-  "keywords": [],
+  "keywords": [
+    "base",
+    "converter",
+    "test"
+  ],
   "verb": {
     "toc": false,
     "layout": "default",
@@ -64,10 +69,10 @@
       ]
     },
     "reflinks": [
-      "templates",
       "assemble",
       "assemble-core",
       "generate",
+      "templates",
       "verb"
     ],
     "lint": {
