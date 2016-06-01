@@ -40,7 +40,7 @@ module.exports = function(App, options, runner) {
 
     describe('static methods', function() {
       it('should expose `extend`:', function() {
-        assert(typeof Group.extend === 'function');
+        assert.equal(typeof Group.extend, 'function');
       });
     });
 
@@ -50,19 +50,19 @@ module.exports = function(App, options, runner) {
       });
 
       it('should expose `use`', function() {
-        assert(typeof group.use === 'function');
+        assert.equal(typeof group.use, 'function');
       });
       it('should expose `set`', function() {
-        assert(typeof group.set === 'function');
+        assert.equal(typeof group.set, 'function');
       });
       it('should expose `get`', function() {
-        assert(typeof group.get === 'function');
+        assert.equal(typeof group.get, 'function');
       });
       it('should expose `visit`', function() {
-        assert(typeof group.visit === 'function');
+        assert.equal(typeof group.visit, 'function');
       });
       it('should expose `define`', function() {
-        assert(typeof group.define === 'function');
+        assert.equal(typeof group.define, 'function');
       });
     });
 
@@ -72,17 +72,17 @@ module.exports = function(App, options, runner) {
       });
 
       it('should expose options:', function() {
-        assert(typeof group.options === 'object');
+        assert.equal(typeof group.options, 'object');
       });
 
       it('should set a value on the instance:', function() {
         group.set('a', 'b');
-        assert(group.a === 'b');
+        assert.equal(group.a, 'b');
       });
 
       it('should get a value from the instance:', function() {
         group.set('a', 'b');
-        assert(group.get('a') === 'b');
+        assert.equal(group.get('a'), 'b');
       });
     });
 
@@ -149,8 +149,8 @@ module.exports = function(App, options, runner) {
             this.set('one', 'two');
           });
 
-        assert(group.one === 'two');
-        assert(group.options.foo === 'bar');
+        assert.equal(group.one, 'two');
+        assert.equal(group.options.foo, 'bar');
       });
     });
   });

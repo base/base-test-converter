@@ -114,7 +114,7 @@ module.exports = function(App, options, runner) {
       app.page('a.tmpl', {content: '<%= a %>', locals: {a: 'b'}})
         .render(function(err, view) {
           if (err) return cb(err);
-          assert(view.content === 'b');
+          assert.equal(view.content, 'b');
           cb();
         });
     });
@@ -125,7 +125,7 @@ module.exports = function(App, options, runner) {
       app.post('a', {content: '{{a}}', locals: {a: 'b'}})
         .render(function(err, view) {
           if (err) return cb(err);
-          assert(view.content === 'b');
+          assert.equal(view.content, 'b');
           cb();
         });
     });
@@ -135,7 +135,7 @@ module.exports = function(App, options, runner) {
       app.post('a', {content: '{{a}}', engine: 'hbs', locals: {a: 'b'}})
         .render(function(err, view) {
           if (err) return cb(err);
-          assert(view.content === 'b');
+          assert.equal(view.content, 'b');
           cb();
         });
     });
@@ -145,7 +145,7 @@ module.exports = function(App, options, runner) {
       app.post('a', {content: '{{a}}', locals: {a: 'b'}, data: {engine: 'hbs'}})
         .render(function(err, view) {
           if (err) return cb(err);
-          assert(view.content === 'b');
+          assert.equal(view.content, 'b');
           cb();
         });
     });
@@ -155,7 +155,7 @@ module.exports = function(App, options, runner) {
       app.post('a', {content: '{{a}}', locals: {a: 'b'}})
         .render({engine: 'hbs'}, function(err, view) {
           if (err) return cb(err);
-          assert(view.content === 'b');
+          assert.equal(view.content, 'b');
           cb();
         });
     });

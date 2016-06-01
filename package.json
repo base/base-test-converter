@@ -1,7 +1,7 @@
 {
   "name": "base-test-converter",
   "description": "Converts unit tests to the style used by base-test-suite.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/node-base/base-test-converter",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "node-base/base-test-converter",

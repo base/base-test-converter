@@ -50,14 +50,14 @@ module.exports = function(App, options, runner) {
         };
         obj.whatever.foo.async = true;
         var helpers = utils.bindAll(obj, ctx);
-        assert(helpers.whatever.foo.async === true);
+        assert.equal(helpers.whatever.foo.async, true);
       });
     });
 
     describe('formatExt', function() {
       it('should ensure that file extension is preceded by a dot:', function() {
-        assert(utils.formatExt('.js') === '.js');
-        assert(utils.formatExt('js') === '.js');
+        assert.equal(utils.formatExt('.js'), '.js');
+        assert.equal(utils.formatExt('js'), '.js');
       });
 
       it('should throw an error when not a string:', function(cb) {
